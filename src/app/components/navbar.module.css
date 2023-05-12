@@ -6,23 +6,24 @@
     background-color: #f0f0f0;
   }
   
-  .navbar-logo {
+  .navbarLogo {
     font-size: 24px;
     font-weight: bold;
     color: #000;
   }
   
-  .navbar-links {
+  .navbarLinks {
     display: flex;
     gap: 16px;
+    list-style: none;
   }
   
-  .navbar-link {
+  .navbarLink {
     color: #000;
     text-decoration: none;
     transition: color 0.3s ease;
   }
   
-  .navbar-link:hover {
+  .navbarLink:hover {
     color: #0070f3;
   }

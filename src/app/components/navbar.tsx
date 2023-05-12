@@ -4,20 +4,20 @@ import styles from "./navbar.module.css";
 export default function Navbar() {
   return (
     <nav className={styles.navbar}>
-      <div className={styles.navbar-logo}>My Website</div>
-      <ul className={styles.navbar-links}>
+      <div className={styles.navbarLogo}>My Website</div>
+      <ul className={styles.navbarLinks}>
         <li>
-          <Link href="/" className={styles.navbar-link}>
+          <Link href="/" className={styles.navbarLink}>
             Home
           </Link>
         </li>
         <li>
-          <Link href="/about" className={styles.navbar-link}>
+          <Link href="/about" className={styles.navbarLink}>
             About
           </Link>
         </li>
         <li>
-          <Link href="/contact" className={styles.navbar-link}>
+          <Link href="/contact" className={styles.navbarLink}>
             Contact
           </Link>
         </li>
