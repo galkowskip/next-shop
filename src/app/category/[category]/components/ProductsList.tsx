@@ -3,12 +3,12 @@ import ProductCard from "./ProductCard"
 
 import styles from "./ProductsList.module.css"
 
-export default function ProductList({products} : {products: Product[]}) {
+export default function ProductList({ products }: { products: Product[] }) {
     return (
         <div className={styles.productGrid}>
-                {products.map((product) => (
-                    <ProductCard product={product}/>
-                ))}
+            {products.map((product) => (
+                <ProductCard key={product.id} product={product} />
+            ))}
         </div>
     )
 }
