@@ -5,7 +5,12 @@ import styles from "./ProductCard.module.css"
 export default function ProductCard({ product }: { product: Product }) {
     return (
         <div className={styles.productCard}>
-            <Image className={styles.productCardImage} src={product.image} alt={product.title} />
+            <Image 
+                width="100"
+                height="80"
+                className={styles.productCardImage} 
+                src={product.image} alt={product.title} 
+            />
             
             <hr className={styles.productCardDivider}/>
 
