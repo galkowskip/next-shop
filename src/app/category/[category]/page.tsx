@@ -1,11 +1,10 @@
 // import { useRouter } from "next/router";
 
-import ProductCard from "@/app/category/[category]/components/ProductCard";
 import { Product } from "../../entities/product";
 import ProductList from "./components/ProductsList";
 
 const getCategoryProductsList = async (category: string) => {
-    const res = await fetch(`https://fakestoreapi.com/products/category/${category}`)
+    const res = await fetch(`app/categories/${category}`)
     const products = await res.json();
 
     if(products.length === 0) {
