@@ -4,25 +4,21 @@ import { Product } from "../../entities/product";
 import ProductList from "./components/ProductsList";
 
 const getCategoryProductsList = async (category: string) => {
-    const res = await fetch(`app/categories/${category}`)
-    const products = await res.json();
+    const res = await fetch(`http://app:3000/categories/${category}`)
+    const data = await res.json();
 
-    if(products.length === 0) {
-        return [] as Product[];
-    }
-
-    return products as Product[]
+    return data as { name: string, products: Product[] };
 }
 
-export default async function Category({ params }: { params: { category: string }}) {
-    
-    const products = await getCategoryProductsList(params.category);
-    
+export default async function Category({ params }: { params: { category: string } }) {
+
+    const data = await getCategoryProductsList(params.category);
+
     return (
         <div>
-            <h1>Category: {params.category}</h1>
+            <h1>Category: {data.name ? data.name : ''}</h1>
 
-            <ProductList products={products}/>
+            <ProductList products={data.products} />
         </div>
     )
 }
